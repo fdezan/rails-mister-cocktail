@@ -3,11 +3,18 @@
 <%= link_to "Adicionar Cocktail", new_cocktail_path, :class=>"btn btn-primary" %>
 
 
+<table class="table table-striped">
+  <thead>
+      <tr>
+         <th>Name</th>
+      </tr>
+   </thead>
+  <tbody>
+    <% @cocktails.each do |cocktail|%>
+     <tr>
+       <td><%= link_to "#{cocktail.name.capitalize}", cocktail_path(cocktail)  %></td>
+     <%end%>
+     </tr>
+</table>
 
-
-<% @cocktails.each do |cocktail|%>
-  <h4> * <%= link_to "#{cocktail.name}", cocktail_path(cocktail)  %></h4>
-<%end%>
-
-<span class="glyphicons glyphicons-glass"></span>
 
