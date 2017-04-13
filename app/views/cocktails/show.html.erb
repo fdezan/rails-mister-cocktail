@@ -1,0 +1,6 @@
+<br>
+<br>
+<h2><%= @cocktail.name.capitalize %></h2>
+<br>
+<br>
+<%= link_to "Delete", cocktail_path(@cocktail), :class=>"btn btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>
