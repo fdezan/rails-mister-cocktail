@@ -1,0 +1,6 @@
+_form.html.erb
+<%= simple_form_for [@ingredients] do |f| %>
+  <%= f.input :name %>
+  <%= f.submit "Adiconar", class: "btn btn-primary" %>
+  <%= link_to "Voltar", cocktails_path, :method => "get", :class=>"btn btn-warning" %>
+<% end %>
