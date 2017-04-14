@@ -1,8 +1,10 @@
-
+<div class="col-xs-12 col-sm-4">
+<h3> Compartilhe seu Cocktail aqui</h3>
 <%= simple_form_for [@cocktail] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo %>
+  <%= f.input :name, label: 'Nome do Cocktail' %>
+  <%= f.input :photo, label: 'Escolha sua Foto' %>
   <%= f.submit "Adiconar", class: "btn btn-primary" %>
   <%= f.input :photo_cache, as: :hidden %>
   <%= link_to "Voltar", cocktails_path, :method => "get", :class=>"btn btn-warning" %>
 <% end %>
+</div>
