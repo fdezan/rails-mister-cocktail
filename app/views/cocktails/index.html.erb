@@ -1,6 +1,7 @@
 <h2> Lista de Cocktails</h2>
   <%= link_to "Adicionar Cocktail", new_cocktail_path, :class=>"btn btn-primary" %>
   <div class="container-fluid">
+    <br>
     <div class="row">
       <% @cocktails.each do |cocktail| %>
       <div class="col-xs-12 col-sm-4">
