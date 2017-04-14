@@ -1,26 +1,16 @@
 <h2> Lista de Cocktails</h2>
 
 <%= link_to "Adicionar Cocktail", new_cocktail_path, :class=>"btn btn-primary" %>
-
-<br>
-<br>
-<!-- <table class="table table-striped">
-  <thead>
-      <tr>
-         <th>Name</th>
-      </tr>
-   </thead>
-  <tbody>
-    <% @cocktails.each do |cocktail|%>
-     <tr>
-       <td><%= link_to "#{cocktail.name.capitalize}", cocktail_path(cocktail)  %></td>
-     <%end%>
-     </tr>
-</table> -->
+<div class="container-fluid">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-4">
+        <%= render "card", cocktail: cocktail %>
+      </div>
+    <% end %>
+  </div>
+</div>
 
 
- <% @cocktails.each do |cocktail| %>
-    <div class="col-xs-12 col-sm-4">
-      <%= render "card", cocktail: cocktail %>
-    </div>
-  <% end %>
+
+
