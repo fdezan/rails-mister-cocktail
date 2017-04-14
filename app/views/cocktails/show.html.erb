@@ -2,5 +2,10 @@
 <br>
 <h2><%= @cocktail.name.capitalize %></h2>
 <br>
+<div>
+  <img src="<%= @cocktail.photo.url %>" alt="Mountain View", style="width:400px;height:380px">
+</div>
 <br>
+
+<%= link_to "Voltar", cocktails_path, :method => "get", :class=>"btn btn-warning" %>
 <%= link_to "Delete", cocktail_path(@cocktail), :class=>"btn btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>
