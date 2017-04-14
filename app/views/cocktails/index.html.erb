@@ -1,16 +1,11 @@
 <h2> Lista de Cocktails</h2>
-
-<%= link_to "Adicionar Cocktail", new_cocktail_path, :class=>"btn btn-primary" %>
-<div class="container-fluid">
-  <div class="row">
-    <% @cocktails.each do |cocktail| %>
+  <%= link_to "Adicionar Cocktail", new_cocktail_path, :class=>"btn btn-primary" %>
+  <div class="container-fluid">
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
       <div class="col-xs-12 col-sm-4">
-        <%= render "card", cocktail: cocktail %>
+      <%= render "card", cocktail: cocktail %>
       </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
-</div>
-
-
-
-
